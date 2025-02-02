@@ -26,7 +26,7 @@ const SignUp = () => {
       Alert.alert("Error", "Please fill in all fields");
     }
 
-    setSubmitting(true);
+    setIsSubmitting(true);
     try {
       const result = await createUser(form.email, form.password, form.username);
       setUser(result);
@@ -36,7 +36,7 @@ const SignUp = () => {
     } catch (error) {
       Alert.alert("Error", error.message);
     } finally {
-      setSubmitting(false);
+      setIsSubmitting(false);
     }
   }
 

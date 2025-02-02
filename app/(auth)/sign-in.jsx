@@ -24,7 +24,7 @@ const SignIn = () => {
       Alert.alert("Error", "Please fill in all fields");
     }
 
-    setSubmitting(true);
+    setIsSubmitting(true);
 
     try {
       await signIn(form.email, form.password);
